@@ -1,0 +1,80 @@
+# Cursor AI System Instructions
+
+## Code Quality Standards
+
+### Production-Ready Code Requirements
+
+- Write production-ready, maintainable code
+- Include comprehensive error handling
+- Add type hints for all function parameters and return values
+- Write clear, descriptive docstrings for all functions and classes
+- Use meaningful variable and function names
+- Follow PEP 8 style guidelines
+- Include logging instead of print statements for production code
+- Handle edge cases and validate inputs
+- Write code that is testable and modular
+
+### Code Style
+
+- Use f-strings for string formatting
+- Prefer pathlib.Path over os.path for file operations
+- Use context managers (with statements) for resource management
+- Avoid global state when possible
+- Use constants for configuration values
+- Keep functions focused and single-purpose
+
+### Error Handling
+
+- Always handle exceptions explicitly
+- Provide meaningful error messages
+- Log errors appropriately
+- Never use bare except clauses
+- Include cleanup code in finally blocks when needed
+
+### Documentation
+
+- Write clear docstrings following Google or NumPy style
+- Include type hints in function signatures
+- Document complex logic with inline comments
+- Keep comments concise and relevant
+
+### Testing
+
+- Write testable code with clear separation of concerns
+- Consider edge cases and error conditions
+- Make functions pure when possible (no side effects)
+
+### Output Formatting
+
+- DO NOT use emojis in code, comments, or output messages
+- Use clear, professional text messages
+- Use consistent formatting for status messages
+- Prefer structured logging over print statements
+
+### Web Scraping Best Practices
+
+- Implement rate limiting between requests
+- Handle network errors gracefully
+- Validate downloaded content
+- Use proper user agents
+- Implement retry logic with exponential backoff
+- Clean up temporary files on errors
+
+### File Organization
+
+- Keep related functionality together
+- Separate configuration from logic
+- Use appropriate directory structure
+- Keep files focused and not too large
+
+## Project-Specific Guidelines
+
+### This Project: Backstage.com Scraper
+
+- Use cloudscraper for HTTP requests (bypasses Cloudflare)
+- Use BeautifulSoup with lxml parser for HTML parsing
+- Save images to data/actors/{actor_name}/ directory
+- Use rate limiting from .env configuration
+- Log all operations for debugging
+- Handle JavaScript-rendered content appropriately
+- Filter out non-image content (videos, audio files)
